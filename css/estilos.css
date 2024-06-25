@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+:root{
+	
+	/*colors*/
+
+	--Green-lighter: hsl(148, 38%, 91%);
+	--Green-medium: hsl(169, 82%, 27%);
+	--Red:hsl(0, 66%, 54%);
+	--White: hsl(0, 0%, 100%);
+	--Grey-medium: hsl(186, 15%, 59%);
+	--Grey-darker: hsl(187, 24%, 22%);
+	
+	/*font*/
+	
+	--karla:"Karla", sans-serif;
+	
+	/*font size*/
+	
+	--label-size: 16px;
+	
+	/*radio*/
+	
+	--radio: 10px;
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+
+body{
+	
+	background-color: var(--Green-lighter);
+	margin: 30px 0;
+}
+
+.main{
+	
+	width: 90%;
+	max-width: 550px;
+	margin: 0 auto;
+	padding: .5rem 1.5rem;
+	background-color: var(--White);
+	font-family: var(--karla);
+	border-radius: var(--radio);
+	
+}
+
+.title{
+	font-weight: 700;
+	padding: 1rem 0;
+	font-size:2rem;
+}
+
+/*conjunto de campos de texto y seleccion*/
+.form{
+	
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+	padding: 1rem 0;
+	
+}
+
+.elements-container{
+	
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+}
+
+/*-----------------------*/
+
+.user-data{
+	/*
+	display: grid;
+	grid-template-rows: 1fr;
+	width: 100%;
+	gap: 10px;*/
+	
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+}
+
+.tag{
+	font-size: var(--label-size);
+
+}
+
+.tag:after{
+	
+	content: '*';
+	display: inline;
+	vertical-align: baseline;
+	color: var(--Green-medium);
+	margin-left: 5px;
+}
+
+.field{
+	
+	height: 3rem;
+	padding-left: 1rem;
+	color: var(--Grey-darker);
+	border: 1px solid var(--Grey-darker);
+	border-radius: var(--radio);
+	width: 100%;
+}
+
+.field:hover, .field:focus{
+	
+	border: 2px solid var(--Green-medium);
+	outline: none;
+}
+
+.selection-item{
+	
+	display: flex;
+	align-items: center;
+	padding-left: 1rem;
+	gap: 15px;
+	font-size: 1.2rem;
+}
+
+.item{
+	
+	transform: scale(1.2);
+	transform-origin: center center;
+	position: relative;
+	left: 2px;
+	color: var(--Grey-medium);
+}
+
+.textarea{
+	
+	display: block;
+	height: 150px;
+	padding: 1rem;
+	
+}
+
+/*boton y checkbox*/
+
+.checkbox{
+	
+	padding-left: 0;
+	
+}
+
+.submit{
+	
+	display: grid;
+	gap: 1rem;
+	padding: .5rem 0;
+}
+
+.boton{
+	
+	font-family: var(--karla);
+	width: 100%;
+	padding: 1rem 0;
+	color: var(--White);
+	background-color: var(--Green-medium);
+	text-align: center;
+	border: none;
+	border-radius: 10px;
+}
+
+/*mensajes de error y confirmacion*/
+
+.checkbox-container{
+	
+	padding: 1rem 0;
+	
+}
+
+.hide-message{
+	
+	display: none;
+	
+}
+
+/*queries*/
+
+@media (min-width: 700px){
+	
+	.--elements-direction{
+	
+		flex-direction: row;
+	
+	}
+	
+}

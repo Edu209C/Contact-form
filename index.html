@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/estilos.css">
+  
+  <title>Frontend Mentor | Contact form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+</head>
+<body>
+
+  <main class="main">
+    <h1 class="title">Contact Us</h1>
+    
+    <form class="form">
+    
+        <!-- name and lastname fields -->
+        <div class='elements-container --elements-direction'>
+        
+          <label for='name' class='user-data name' id="name-label">
+            <span class='tag'>First Name</span>
+            <input type='text' name='name' id='name' class='field field_styles textField'>
+            
+            <span class="hide-messagee">This field is required</span>
+          </label>
+        
+          <label for='lastname' class='user-data lastname' id="lastname-label">
+            <span class='tag'>Last Name</span>
+            <input type='text' name='lastname' id='lastname' class='field field_styles textField'>
+            
+            <span class="hide-messagee">This field is required</span>
+          </label>
+        
+        </div>
+        
+        <!-- emails field -->
+        
+        <label for='email' class='user-data email' id="email-label">
+          <span class='tag'>Email Address</span>
+          <input type='email' name='email' id='email' class='field field_styles textField'>
+          
+          <span class="hide-messagee">Please enter a valid email address</span>
+          
+        </label>
+        
+        <!-- radios field -->
+        
+        <div class='elements-container radios-container' id='query-selection'>
+            <span class='tag' id="query">Query Type</span>
+             
+             <div class="elements-container --elements-direction">
+              <label class='field selection-item radio' id='general-label' for='general'> <input type='radio' class='item' name='selection' id='general'> General Enquiry
+              </label>
+          
+              <label class=' field selection-item radio' for='support' id='support-label'><input type='radio' class='item' name='selection' id='support'>Support Request
+              </label>
+            </div>
+            
+            <span class="hide-messagee" id="pepe">This field is required</span>
+        </div>
+        
+        <!-- message field -->
+        
+        <label class='user-data' for='messageArea' id="message-label">
+            <span class='tag'>Message</span>
+            <textarea class='field textarea textField' name='messageArea' id="messageArea"></textarea>
+
+            <span class="hide-messagee">This field is required</span>
+        </label>
+      
+       <!-- checkbox -->
+       
+       <div class="elements-container checkbox-container">
+          <label class='selection-item checkbox' for='checkbox'>
+            <input type='checkbox' class='item' name='checkbox'>
+            <span class='tag'>I consent to being contacted by the team</span>
+          </label>
+          <span class="hide-messagee">To submit this form, please consent to being contacted</span>
+       
+       </div>
+       
+       <div class="elements-container submit">
+          <button class="boton" type='submit' id='boton'>
+            Submit
+          </button>
+          
+          <span class="hide-messagee">Message Sent!<br>Thanks for completing the form. We'll be in touch soon!</span>
+       
+       </div>
+    
+    </form>
+  
+  
+  </main>
+
+  
+</body>
+</html>
+
+<!--
+
+Contact Us
+
+  First Name
+  This field is required
+
+  Last Name
+  This field is required
+
+  Email Address
+  Please enter a valid email address
+  This field is required
+
+  Query Type
+  General Enquiry
+  Support Request
+  Please select a query type
+
+  Message
+  This field is required
+
+  I consent to being contacted by the team
+  To submit this form, please consent to being contacted
+
+  Submit
+
+  Message Sent!
+  Thanks for completing the form. We'll be in touch soon!
+  
+ 
+-->
