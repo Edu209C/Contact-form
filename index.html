@@ -8,129 +8,92 @@
   <link rel="stylesheet" href="css/estilos.css">
   
   <title>Frontend Mentor | Contact form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   
 </head>
 <body>
+  
+    <div class="mensaje-confirmacion" id="mensaje-confirmacion">
+      <span class="mensaje-confirmacion__message-sent">Message Sent!</span>
+      <span class="mensaje-confirmacion__thanks">Thanks for completing the form. We'll be in touch soon!</span>
+    </div>
 
-  <main class="main">
-    <h1 class="title">Contact Us</h1>
-    
-    <form class="form">
-    
-        <!-- name and lastname fields -->
-        <div class='elements-container --elements-direction'>
-        
-          <label for='name' class='user-data name' id="name-label">
-            <span class='tag'>First Name</span>
-            <input type='text' name='name' id='name' class='field field_styles textField'>
-            
-            <span class="hide-messagee">This field is required</span>
-          </label>
-        
-          <label for='lastname' class='user-data lastname' id="lastname-label">
-            <span class='tag'>Last Name</span>
-            <input type='text' name='lastname' id='lastname' class='field field_styles textField'>
-            
-            <span class="hide-messagee">This field is required</span>
-          </label>
-        
-        </div>
-        
-        <!-- emails field -->
-        
-        <label for='email' class='user-data email' id="email-label">
-          <span class='tag'>Email Address</span>
-          <input type='email' name='email' id='email' class='field field_styles textField'>
+    <main class="main">
+      <h1 class="main__title">Contact Us</h1>
+      
+      <form class="formulario" id='formulario' action="">
+      
+          <!-- grupo name -->
+          <div class="formulario__grupo formulario__grupo-name" id='grupo-name'>
+            <label class="formulario__label" for='name'>First Name</label>
+            <input type="text" class="formulario__input" id='name' name='name'>
+            <p class="formulario__input-error">This field is requiered</p>
+          </div>
           
-          <span class="hide-messagee">Please enter a valid email address</span>
+          <!-- grupo lastname -->
           
-        </label>
-        
-        <!-- radios field -->
-        
-        <div class='elements-container radios-container' id='query-selection'>
-            <span class='tag' id="query">Query Type</span>
-             
-             <div class="elements-container --elements-direction">
-              <label class='field selection-item radio' id='general-label' for='general'> <input type='radio' class='item' name='selection' id='general'> General Enquiry
+          <div class="formulario__grupo formulario__grupo-lastname" id='grupo-lastname'>
+            <label class="formulario__label" for='lastname'>last Name</label>
+            <input type="text" class="formulario__input" id='lastname' name='lastname'>
+            <p class="formulario__input-error">This field is requiered</p>
+          </div>
+          
+          <!-- grupo email -->
+          <div class="formulario__grupo formulario__grupo-email" id='grupo-email'>
+            <label class="formulario__label" for='email'>Email</label>
+            <input type="email" class="formulario__input" id='email' name='email'>
+            <p class="formulario__input-error"></p>
+           
+          </div>
+          
+          <!-- grupo radios -->
+          
+          <div class="formulario__grupo formulario__grupo-radio" id='grupo-radio'>
+            <label class="formulario__label">Query Type</label>
+            
+            <div>
+              <label class="formulario__input formulario__radio-container" name="label1">
+                <input type="radio" class="formulario__input-radio" name="radio">
+                <span class="formulario__radio-option">General Enquiry</span>
               </label>
-          
-              <label class=' field selection-item radio' for='support' id='support-label'><input type='radio' class='item' name='selection' id='support'>Support Request
+              
+              <label class="formulario__input formulario__radio-container" name="label2">
+                <input type="radio" name="radio" class="formulario__input-radio">
+                <span class="formulario__radio-option">Support Request</span>
               </label>
             </div>
+            <p class="formulario__input-error">Please select a query type</p>
             
-            <span class="hide-messagee" id="pepe">This field is required</span>
-        </div>
-        
-        <!-- message field -->
-        
-        <label class='user-data' for='messageArea' id="message-label">
-            <span class='tag'>Message</span>
-            <textarea class='field textarea textField' name='messageArea' id="messageArea"></textarea>
-
-            <span class="hide-messagee">This field is required</span>
-        </label>
-      
-       <!-- checkbox -->
-       
-       <div class="elements-container checkbox-container">
-          <label class='selection-item checkbox' for='checkbox'>
-            <input type='checkbox' class='item' name='checkbox'>
-            <span class='tag'>I consent to being contacted by the team</span>
-          </label>
-          <span class="hide-messagee">To submit this form, please consent to being contacted</span>
-       
-       </div>
-       
-       <div class="elements-container submit">
-          <button class="boton" type='submit' id='boton'>
-            Submit
-          </button>
+          </div>
           
-          <span class="hide-messagee">Message Sent!<br>Thanks for completing the form. We'll be in touch soon!</span>
-       
-       </div>
-    
-    </form>
-  
-  
-  </main>
+          <!-- grupo message -->
+          
+          <div class="formulario__grupo formulario__grupo-message" id='grupo-message'>
+            <label class="formulario__label" for='email'>Message</label>
+            <textarea class="formulario__input formulario__input-message" id='message' name='message'></textarea>
+            <p class="formulario__input-error">This field is requiered</p>
+          </div>
+          
+          <!-- grupo checkbox -->
+          <div class="formulario__grupo " id='grupo-checkbox'>
+            
+            <label class="formulario__grupo-checkbox">
+              <input type="checkbox" class="formulario__input-checkbox" name="checkbox" id='checkbox'>
+              <label class="formulario__label" for='checkbox'>I consent to being contacted by the team</label>
+            </label>
+            <p class="formulario__input-error">This field is requiered</p>
+            
+          </div>
+          
+          <!-- grupo submit -->
+         
+          <div class="formulario__grupo formulario__grupo-btn" id='grupo-btn'>
+            <button class="formulario__btn" name="btn">Submit</button>
+          </div>
+      </form>
+    </main>
 
+    <script src="javascript/formulario.js"></script>
   
-</body>
+  </body>
 </html>
 
-<!--
-
-Contact Us
-
-  First Name
-  This field is required
-
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
- 
--->
