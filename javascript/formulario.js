@@ -34,25 +34,25 @@ const validarFormulario= (e)=>{
 	switch(e.target.name){
 		
 		case "name":
-			console.log("name");
+			
 			validarCampo(expresiones.nombre, e.target, 'name');
 			
 		break;
 				
 		case "lastname":
-			console.log("lastname");
+			
 			validarCampo(expresiones.nombre, e.target, 'lastname');
 			
 		break;
 		
 		case "email":
-			console.log("email");
+			
 			validarCampoEmail(expresiones.email, e.target, 'email');
 			
 		break;
 		
 		case "message":
-			console.log("message");
+			
 			validarCampo(expresiones.nombre, e.target, 'message');
 			
 		break;
@@ -75,13 +75,13 @@ const validarCampo= (expresion, input, campo)=>{
 	
 	
 	if(expresion.test(input.value)){
-		console.log("si");
+		
 		messageError.classList.remove("formulario__input-error-activo");
 		campos[campo]= true;
-		console.log(campos[campo]);
+		
 		
 	}else{
-		console.log("no");
+		
 		messageError.classList.add("formulario__input-error-activo");
 		campos[campo]= false;
 	}
@@ -133,7 +133,6 @@ const validarChecks= (campo)=>{
 			flag= true;
 			campos[campo]= true;
 		}
-		
 	})
 	
 	if(!flag){
@@ -207,8 +206,8 @@ selectRadio.forEach((option)=>{
 			campos.checked= false;
 		}
 		
-	)}	
-)
+	})
+})
 	
 
 formulario.addEventListener("submit", (e)=>{
@@ -221,7 +220,6 @@ formulario.addEventListener("submit", (e)=>{
 	validarFormulario(e);
 	
 	if(campos.name && campos.lastname && campos.email && campos.message && campos.radio && campos.checkbox ){
-		
 		
 		formulario.reset();
 		mensajeConfirmacion.classList.add("mensaje-confirmacion-activo");

@@ -209,7 +209,7 @@ body{
 	max-width: 365px;
 	margin: 0 auto;
 	height: 100px;
-	display: flex;
+	display: none;
 	flex-direction: column;
 	align-items: space-around;
 	justify-content: center;
@@ -297,7 +297,6 @@ body{
 		height: 120px;
 		gap: 10px;
 	}
-	.mensaje-confirmacion-activo{display: flex;}
 	
 	.mensaje-confirmacion__message-sent{
 		font-size: 1.5rem;
